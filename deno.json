@@ -1,0 +1,33 @@
+{
+    "workspace": ["./backend", "./frontend", "./shared"],
+    "tasks": {
+        "frontend": "deno run --watch --allow-net=0.0.0.0:4430 --allow-read --allow-env ./frontend/main.ts",
+        "backend": "deno run --watch --allow-net=0.0.0.0:4431,api.openai.com:443 --allow-read --allow-env ./backend/main.ts",
+        "prettify": "deno fmt && deno lint && deno task check",
+        "check": "deno check ./backend && deno check ./frontend && deno check ./shared",
+        "fmt": "deno fmt --watch",
+        "lint": "deno lint --watch"
+        
+    },
+    "lint": {
+        "include": ["./backend/", "./frontend/", "./shared/"],
+        "exclude": [],
+        "rules": {
+            "tags": ["recommended"],
+            "include": ["ban-untagged-todo"],
+            "exclude": ["no-explicit-any"]
+        }
+    },
+    "fmt": {
+        "include": ["./backend/", "./frontend/", "./shared/"],
+        "exclude": [],
+        "useTabs": false,
+        "lineWidth": 80,
+        "indentWidth": 2,
+        "semiColons": true,
+        "singleQuote": true
+    },
+    "imports": {
+        "@std/dotenv": "jsr:@std/dotenv@^0.225.2"
+    }
+}
