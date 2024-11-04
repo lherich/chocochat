@@ -1,0 +1,10 @@
+{
+  "name": "@scope/backend",
+  "exports": "./main.ts",
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.1.2",
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/http": "jsr:@std/http@^1.0.9",
+    "openai": "npm:openai@^4.68.4"
+  }
+}
