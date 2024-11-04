@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Choc'o'chat</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Choc'o'chat</h1>
+      </header>
+      <ul id="conversation"></ul>
+      <form id="form">
+        <input
+          type="text"
+          id="data"
+          placeholder="message"
+          autocomplete="off"
+        />
+        <button type="submit" id="send">send</button>
+      </form>
+    </main>
+
+    <template id="message">
+      <li class="message">
+        <div class="chat_header"></div>
+        <div class="chat_content"></div>
+      </li>
+    </template>
+  </body>
+</html>
