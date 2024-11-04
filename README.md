@@ -1,5 +1,5 @@
 # chocochat
-Simple chat with deno2, oak, oak-cors and websockets.
+Simple chat with deno2, oak, oak-cors, openai and websockets.
 
 ## Get Started
 ```
@@ -11,6 +11,7 @@ openssl req -x509 -out localhost.crt -keyout localhost.key \
   -subj "/CN=localhost" -days 9999
 
 cp .env.example .env
+# add your openai key
 vi .env
 
 # if you changed port/host adjust deno.json
